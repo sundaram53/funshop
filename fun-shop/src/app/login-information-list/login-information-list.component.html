@@ -1,0 +1,36 @@
+<h5>Login Information List</h5><br>
+<table class="table table-striped">
+<thead>
+    <tr>
+        <th>Customer Id</th>
+        <th>Phone Number New111</th>
+        <th>Email Id</th>
+        <th>Login Password</th>
+        <th>Login OldPassword</th>
+        <th>Update DateTime</th>
+        <th>Actions</th>
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let user of logininformations; index as i; first as isFirst">
+        <td>{{user.custId}}</td>
+        <td>{{user.phoneNumber}}</td>
+        <td>{{user.emailId}}</td>
+        <td>{{user.loginPassword}}</td>
+        <td>{{user.loginOldPassword}}</td>
+        <td>{{user.dtUpdate}}</td>
+        <td>
+            <button (click)="updateLoginInformationByCustId(user.custId)" class="btn btn-info">Update</button>
+            <button (click)="deleteLoginInformationByCustId(user.custId)" class="btn btn-danger" style="margin-left: 10px;">Delete</button>
+            <br>
+            <button (click)="viewLoginInformationByCustId(user.custId)" class="btn btn-info" style="margin-left: 10px;">View</button>
+        </td>
+    </tr> 
+</tbody>
+</table>
+<br><br>
+<hr>
+<hr>
+<li *ngFor="let user of logininformations; index as i; first as isFirst">
+    {{i}}/{{user.phoneNumber}}. {{user}} <span *ngIf="isFirst">default</span>
+</li>

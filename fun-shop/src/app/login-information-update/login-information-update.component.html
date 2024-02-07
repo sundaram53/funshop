@@ -1,0 +1,26 @@
+<div class="col-md-6 offset-md-3">
+    <h5>Update LoginInformation</h5><br>
+    <form (ngSubmit) = "onSubmit()">
+        <div class="form-group">
+            <label>Phone Number</label>
+            <input type="text" class="form-control" id="phoneNumber" 
+                [(ngModel)] = "logininfoupdate.phoneNumber" name="phoneNumber">
+        </div>
+        <div class="form-group">
+            <label>Email Id</label>
+            <input type="text" class="form-control" id="emailId" 
+                [(ngModel)] = "logininfoupdate.emailId" name="emailId">
+        </div>
+        <div class="form-group">
+            <label>Login Password</label>
+            <input type="text" class="form-control" id="loginPassword" 
+                [(ngModel)] = "logininfoupdate.loginPassword" name="loginPassword">
+        </div>
+        <div class="form-group">
+            <label>Login OldPassword</label>
+            <input type="text" class="form-control" id="loginOldPassword" 
+                [(ngModel)] = "logininfoupdate.loginOldPassword" name="loginOldPassword">
+        </div>
+        <button class = "btn btn-success" type="submit">Submit</button>
+    </form>
+    </div>
